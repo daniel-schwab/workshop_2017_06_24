@@ -15,7 +15,9 @@ export class FlightSearchComponent {
   from: string;
   to: string;
 
-  selectedFlight: Flight
+  title = 'Flight Search';
+
+  selectedFlight: Flight;
 
   basket: object = {
     "3": true,
