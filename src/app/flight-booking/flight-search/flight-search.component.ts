@@ -12,8 +12,8 @@ import { FlightService } from './flight.service';
 })
 export class FlightSearchComponent {
 
-  from: string;
-  to: string;
+  from: string = 'Hamburg';
+  to: string = 'Graz';
 
   title = 'Flight Search';
 
@@ -22,7 +22,7 @@ export class FlightSearchComponent {
   basket: object = {
     "3": true,
     "4": false,
-    "5": true
+    "5": undefined
   };
 
   // private http: Http;
