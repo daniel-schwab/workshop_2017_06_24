@@ -5,6 +5,8 @@
   <h2>{{item.from}} - {{item.to}}</h2>
   <p>Flugnr. #{{item.id}}</p>
   <p>Datum: {{item.date | date:'dd.MM.yyyy HH:mm'}}</p>
+  <p>Flughafen von: {{item.from | city}}</p>
+  <p>Flughafen nach: {{item.to | city:'short'}}</p>
 
   <p>
     <button class="btn btn-default" *ngIf="!selected" (click)="select()">Auswählen</button>
