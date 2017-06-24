@@ -35,4 +35,21 @@ export class FlightService {
             );
 
   }
+
+  findAndReturn(from: string, to: string) {
+    let url = this.baseUrl + '/flight';
+
+    let headers = new  Headers();
+    headers.set('Accept', 'application/json');
+
+    let search = new URLSearchParams();
+    search.set('from', from);
+    search.set('to', to);
+
+    return this
+        .http
+        .get(url, { headers, search })
+        .map(resp => resp.json());
+
+  }
 }
