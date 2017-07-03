@@ -1,6 +1,8 @@
 <div style="padding:20px;"
      class="card"
-     [@select]="selected">
+     [@select]="selected"
+     (@select.start)="start($event)"
+     (@select.done)="done($event)">
 
   <h2>{{item.from}} - {{item.to}}</h2>
   <p>Flugnr. #{{item.id}}</p>
